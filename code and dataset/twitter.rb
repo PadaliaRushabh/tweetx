@@ -12,10 +12,10 @@ PERIOD = 31
 pFile = File.new("twitter_dataset.csv", "a")
 
 Twitter.configure do |config|
-  config.consumer_key ="qW1qVVBo5z93rdago5PI7Q"
-  config.consumer_secret = "xkEImuRh3WhOrp6q2cmirOKM2jdeTsl7nXZWvTtqI"
-  config.oauth_token = "783801600-sQiavEawypG08bo8Qk63LlxG0adVuYuO2iDFChTX"
-  config.oauth_token_secret = "OjzseHQ7hMtHovPhSGbTlgtBAKACvcrZuYONDQBLpw"
+  config.consumer_key ="XXXXXXXX"
+  config.consumer_secret = "XXXXXXX"
+  config.oauth_token = "XXXXXXX"
+  config.oauth_token_secret = "XXXXXXX"
 end
 
 # Header
