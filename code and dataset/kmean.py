@@ -60,11 +60,12 @@ def calcDistance(a, b):
     return math.sqrt(ret)
 
 
-def getinfo():
+def getDataFromFile():
 	cr = csv.reader(open("normalized_twitter_dataset.csv","rb"))
 	return  cr
 
-def getDataFromFile(row):
+
+def getinfo(row):
 	return Point([np.float32(x) for x in row])
 
 def main():
@@ -73,11 +74,11 @@ def main():
 	cutoff =  0.5
 	k = int(raw_input("Input Number of cluster:"))
 	start_time = time.time()
-    	reader = getinfo()
+    	reader = getDataFromFile()
     	points = []
 	point_counter = 0
     	for row in reader:
-		points.append(getDataFromFile(row[1:]))
+		points.append(getinfo(row[1:]))
 		point_counter = point_counter + 1
     	clusters = kmeans(points, k, cutoff)
 	#total_points ,final_centroids = clusters
